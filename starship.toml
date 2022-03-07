@@ -68,7 +68,7 @@ disabled = true
 
 [aws]
 format = '[on](bold bright-black) [$symbol($profile)(\($region\))(\[$duration\])]($style)'
-symbol = " "
+symbol = " "
 style = "bold #ffb86c"
 
 [docker_context]
