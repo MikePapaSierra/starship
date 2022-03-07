@@ -113,7 +113,7 @@ format = "[via](bold bright-black) [$symbol($version )]($style)"
 style = "bold #bd93f9" 
 
 [terraform]
-format = "[🏎💨 $version$workspace]($style)"
+format = "[on](bold bright-black) [異$version $workspace]($style) "
 style = "bold #50fa7b"
 
 [gcloud]
