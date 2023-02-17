@@ -1,48 +1,4 @@
-#[aws]
-#symbol = " "
-#format = 'on [$symbol($profile )(\($region\))(\[$duration\])]($style)'
-#style = "bold yellow"
-#
-#[gcloud]
-#symbol = " "
-#format = 'on [$symbol$account(@$domain)(\($project\))]($style)'
-#style = "bold blue"
-#
-#[cmd_duration]
-#disabled = true
-#
-#[hostname]
-#ssh_only = true
-#format = "on [$hostname](bold red) "
-#trim_at = ""
-#disabled = false
-#
-#[directory]
-#read_only = " "
-#
-#[docker_context]
-#symbol = " "
-#
-#[git_branch]
-#symbol = " "
-#
-#[golang]
-#symbol = " "
-#
-#[nodejs]
-#symbol = " "
-#
-#[package]
-#symbol = " "
-#
-#[python]
-#symbol = " "
-#
-#[ruby]
-#symbol = " "
-#
-#[terraform]
-#format = "[🏎💨 $version$workspace]($style) "
+command_timeout = 1000
 
 [username]
 format = "[╭─](bold bright-black) [$user]($style)[@](bold red)"
@@ -115,20 +71,8 @@ format = '[on](bold bright-black) [$symbol($profile)(\($region\))(\[$duration\])
 symbol = " "
 style = "bold #ffb86c"
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
 [docker_context]
 symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
 
 [git_branch]
 format = "[on](bold bright-black) [$symbol$branch]($style) "
@@ -146,12 +90,6 @@ symbol = " "
 [java]
 symbol = " "
 
-[julia]
-symbol = " "
-
-[nim]
-symbol = " "
-
 [nix_shell]
 symbol = " "
 
@@ -163,24 +101,12 @@ style = "bold #ff79c6"
 [package]
 symbol = " "
 
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
 [python]
 symbol = " "
 style = "bold #8be9fd"
 
 [ruby]
 symbol = " "
-
-[rust]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
 
 [lua]
 format = "[via](bold bright-black) [$symbol($version )]($style)"
@@ -189,3 +115,9 @@ style = "bold #bd93f9"
 [terraform]
 format = "[🏎💨 $version$workspace]($style)"
 style = "bold #50fa7b"
+
+[gcloud]
+symbol = " "
+format = ' [on](bold bright-black) [$symbol$account(@$domain)(\($project\))]($style)'
+style = "bold #6272a4"
+
