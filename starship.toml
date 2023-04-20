@@ -1,7 +1,33 @@
+# Starship configuratio n
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Configure format of the prompt
+# TODO: Remove one by one to identified not needed packages 
+format = """
+$username\
+$hostname\
+$kubernetes\
+$directory\
+$fossil_branch\
+$git_branch\
+$git_status\
+$hg_branch\
+$line_break\
+$character"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
 command_timeout = 1000
 
 [username]
-format = "[╭─](bold bright-black) [$user]($style)[@](bold red)"
+format = "[❯](bold bright-black) [$user]($style)[@](bold red)"
 style_user = "bold white"
 style_root = "bold red"
 show_always = true
@@ -19,45 +45,29 @@ disabled = false
 [directory]
 style = "bold #50fa7b"
 truncation_length = 0
-truncate_to_repo = true
-truncation_symbol = "repo: "
+truncate_to_repo = false
+truncation_symbol = "\ue725 "
 
 # Before all the version info (python, nodejs, php, etc.)
+# TODO: Update Git status icons to something more miningful
 [git_status]
 style = "bold #ff5555"
 format = '([\[$all_status$ahead_behind\]]($style) )'
-conflicted = "🏳${count}"
-up_to_date = "✓${count}"
-untracked = "🤷${count}"
-stashed = "📦${count}"
-modified = "📝${count}"
-staged = '[++\($count\)](bold #50fa7b)'
-renamed = "👅${count}"
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
-deleted = "🗑${count}"
+conflicted = "=${count} "
+up_to_date = "󰄬${count} "
+untracked = "?${count} "
+stashed = "$${count} "
+modified = "!${count} "
+staged = '[++\($count\)](bold #50fa7b) '
+renamed = "»${count} "
+ahead = "⇡${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+behind = "⇣${count} "
+deleted = "✘${count} "
 
-# Last param in the first line/row
-[cmd_duration]
-min_time = 1
-format = "took [$duration]($style)"
-disabled = true
-
-
-## SECOND LINE/ROW: Prompt
-# Somethere at the beginning
-# Prompt: optional param 1
-[time]
-format = "[│](bold blue)$time($style)🕙\n"
-time_format = "%T"
-style = "bright-white"
-disabled = true
-
-# Prompt: param 2 └─
 [character]
-success_symbol = "[╰─>](bold bright-black)"
-error_symbol = "[╰─×](bold bright-black)"
+success_symbol = "[➜](bold #50fa7b)"
+error_symbol = "[➜](bold #ff5555)"
 
 # SYMBOLS
 [status]
@@ -113,6 +123,7 @@ format = "[via](bold bright-black) [$symbol($version )]($style)"
 style = "bold #bd93f9" 
 
 [terraform]
+symbol = "󱁢 "
 format = "[on](bold bright-black) [異$version $workspace]($style) "
 style = "bold #50fa7b"
 
