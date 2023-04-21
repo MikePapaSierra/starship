@@ -1,10 +1,9 @@
-# Starship configuratio n
+# Starship configuration
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Configure format of the prompt
-# TODO: Remove one by one to identified not needed packages 
 format = """
 $username\
 $hostname\
@@ -27,9 +26,9 @@ disabled = true
 command_timeout = 1000
 
 [username]
-format = "[❯](bold bright-black) [$user]($style)[@](bold red)"
+format = "[❯](bold #6272a4) [$user]($style)[@](bold red)"
 style_user = "bold white"
-style_root = "bold red"
+style_root = "bold #ff5555"
 show_always = true
 disabled = false
 
@@ -43,20 +42,20 @@ disabled = false
 
 # Third param
 [directory]
-style = "bold #50fa7b"
+style = "dimmed bold #50fa7b"
 truncation_length = 0
 truncate_to_repo = false
 truncation_symbol = "\ue725 "
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
-style = "bold #ff5555"
+style = "dimmed bold #ff5555"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = "${count} "
 untracked = "${count} "
 stashed = "${count} "
 modified = "${count} "
-staged = '[\($count\)](bold #50fa7b) '
+staged = '[\($count\)](dimmed bold #50fa7b) '
 renamed = "${count} "
 ahead = "${count} "
 diverged = "${ahead_count}${behind_count} "
@@ -64,8 +63,8 @@ behind = "${count} "
 deleted = "✘${count} "
 
 [character]
-success_symbol = "[](bold #50fa7b)"
-error_symbol = "[](bold #ff5555)"
+success_symbol = "[](dimmed #6272a4)"
+error_symbol = "[](dimmed #ff5555)"
 
 # SYMBOLS
 [status]
@@ -81,11 +80,12 @@ style = "bold #ffb86c"
 
 [docker_context]
 symbol = " "
+style = "bold #8be9fd"
 
 [git_branch]
 format = "[on](bold bright-black) [$symbol$branch]($style) "
 symbol = " "
-style = "bold #ff79c6"
+style = "bold #ff5555"
 
 [golang]
 format = "[via](bold bright-black) [$symbol($version )]($style)"
@@ -118,7 +118,7 @@ symbol = " "
 
 [lua]
 format = "[via](bold bright-black) [$symbol($version )]($style)"
-style = "bold #bd93f9" 
+style = "bold #bd93f9"
 
 [terraform]
 symbol = "󱁢 "
