@@ -44,7 +44,7 @@ disabled = false
 [directory]
 style = "dimmed bold #50fa7b"
 truncation_length = 0
-truncate_to_repo = false
+truncate_to_repo = true
 truncation_symbol = "\ue725 "
 
 # Before all the version info (python, nodejs, php, etc.)
