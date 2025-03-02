@@ -25,6 +25,7 @@ add_newline = true
 [package]
 disabled = true
 command_timeout = 1000
+symbol = " "
 
 [username]
 format = "[❯](bold #6272a4) [$user]($style)[@](bold red)"
@@ -108,8 +109,6 @@ format = "[via](bold bright-black) [$symbol($version )]($style)"
 symbol = " "
 style = "bold green"
 
-[package]
-symbol = " "
 
 [python]
 symbol = " "
