@@ -60,6 +60,10 @@ The repository is public to serve as inspiration — feel free to **fork** and *
 
 - `starship.toml` — main configuration file for Starship prompt.
 
+## Related
+
+- [Fish shell configuration](https://github.com/MikePapaSierra/fish)
+
 ## License
 
 This project is shared under the [MIT License](LICENSE), but primarily for reference. Fork freely!
